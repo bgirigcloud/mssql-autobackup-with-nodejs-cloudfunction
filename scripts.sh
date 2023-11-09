@@ -4,3 +4,13 @@ $ gcloud functions add-iam-policy-binding demo-mssql-auto-bkp \
     --region="us-central1" \
     --member="serviceAccount:demo-for-sql-auto-bkp@kinetic-object-400913.iam.gserviceaccount.com" \
     --role="roles/cloudfunctions.invoker"
+
+ gcloud functions add-iam-policy-binding demo-mssql-auto-bkp \
+    --region="us-central1" \
+    --member="serviceAccount:demo-for-sql-auto-bkp@kinetic-object-400913.iam.gserviceaccount.com" \
+    --role="roles/storage.admin"
+
+    gcloud functions add-iam-policy-binding demo-mssql-auto-bkp \
+    --region="us-central1" \
+    --member="serviceAccount:demo-for-sql-auto-bkp@kinetic-object-400913.iam.gserviceaccount.com" \
+    --role="roles/storage.admin"
