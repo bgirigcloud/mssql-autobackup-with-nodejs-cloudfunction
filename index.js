@@ -23,14 +23,14 @@ exports.exportDatabase = (_req, res) => {
            * If the file already exists, the operation fails.
            * If fileType is SQL and the filename ends with .gz, the contents are compressed.
            */
-          uri:"gs://kinetic-object-400913-sql-backup",
+          uri:"gs://kinetic-object-400913-sql-backup/mssql.gz",
           /**
            * Databases from which the export is made.
            * If fileType is SQL and no database is specified, all databases are exported.
            * If fileType is CSV, you can optionally specify at most one database to export.
            * If csvExportOptions.selectQuery also specifies the database, this field will be ignored.
            */
-          databases:[""]
+          databases:["demo-database"]
    
           // Options for exporting data as SQL statements.
           // sqlExportOptions: {
